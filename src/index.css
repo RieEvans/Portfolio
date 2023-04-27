@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Luckiest+Guy&display=swap');
+
+
+body {
+    width: 100%;
+    font-family: Comfortaa, sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+
+
+
+@media (max-width:1024px){
+    .container .home .name-section p {
+        font-size: 1rem;
+    }
+
+    .container .home .name-section h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width:862px){
+    .container .home {
+        flex-direction: column;
+        justify-content: none;
+    }
+
+    .container .home .name-section {
+        border: none;
+    }
+
+    .abouts .abt-ints {
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+
+}
+
+
+.container .navbar a .bars {
+    color: #EEEE;
+    font-size: 1.4rem;
+    display: none;
+}
+
+
+@media (max-width:680px){
+    .projects  {
+        margin: auto;
+        width: 100%;
+    }
+
+    .contact .contactInfo {
+        margin: auto;
+        width: 50%;
+    }
+
+    .container .navbar {
+        z-index: 20;
+    }
+
+    .container .navbar ul li a {
+        display: none;
+    }
+
+
+    .container .navbar a .bars {
+        display: block;
+    }
+
+    .container .menu {
+        display: block;
+        position: fixed;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        margin-top: 2rem;
+        z-index: 1000;
+        
+    }
+
+    .container .menu.active {
+        transform: translate(0%);
+        transition: .15s;
+    }
+
+    .container .menu.inactive{
+        transition: .15s;
+        transform: translateY(-120%);
+    }
+
+
+    .container .menu .list {
+        background-color: #0b0b0c;
+        padding: 0 1rem 0 1rem;
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 1%;
+        z-index: 1000;
+    }
+
+    .container .menu .list ul {
+        
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .container .menu .list ul li a {
+        text-decoration: none;
+        color: #EEEE;
+        
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    
+}
+
+@media (max-width:550px){
+    .projects .projList .proj {
+        flex-direction: column;
+    }
+
+    .projects .projList .proj img {
+        max-width: 500px;
+    }
+
+    .skillsection .skill {
+        flex-direction: column;
+        
+        
+    }
+
+    .skillsection .skill .skillsList {
+        border: none;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom-right-radius: 1rem;
+    }
+
+    .skillsection .skill .skillsList h2 {
+        text-align: center;
+    }
+
+    .skillsection .skill .title {
+        border-top: 2px solid black;
+        border-top-left-radius: 1rem;
+    }
+
+    .contact .contactInfo {
+        margin: auto;
+        width: 70%;
+      }
+
+}
+
+@media (max-width:500px){
+    .projects .projList .proj img {
+        max-width: 400px;
+    }
+
+    .container .home .name-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact .contactInfo {
+        margin: auto;
+        width: 100%;
+    }
+
+    .container .menu .list ul li a {
+        font-size: .95rem;
+    }
+}
+
+@media(max-width:450px){
+    .container .menu .list ul li a {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width:400px){
+    .projects .projList .proj img {
+        max-width: 300px;
+    }
+
+    .container .menu .list ul li a {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width:370px){
+    .contact {
+        width: 100%;
+    }
+
+    .container .menu .list {
+        padding: 0 .5rem 0 .5rem;
+    }
+
+    .container .menu .list ul li a {
+        font-size: .7rem;
+    }
+} 
+
+@media (max-width:320px){
+    .container .home .name-section h1 {
+        font-size: 2rem;
+    }
+
+    .contact .contactInfo h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:300px){
+    .projects .projList .proj img {
+        max-width: 270px;
+    }
+
+    .contact .contactInfo p {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width:250px){
+    .projects .projList .proj img {
+        max-width: 220px;
+    }
+
+    .contact .contactInfo p {
+        font-size: .7rem;
+    }
+}
+
+
+
