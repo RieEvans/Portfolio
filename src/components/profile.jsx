@@ -11,9 +11,11 @@ import {Fade} from 'react-reveal'
 
 import axios from 'axios'
 import FileDownload from 'js-file-download'
+import fileDownload from 'js-file-download';
 
 
 
+const resume = "https://riejan.netlify.app/resume.pdf"
 
 const Profile = () => {
 
@@ -101,20 +103,16 @@ const Profile = () => {
         }
     },[inView])
 
-    
-
-    const download = (e) => {
-        e.preventDefault()
-        axios({
-            url:"http://localhost:4000",
-            method:"GET",
-            responseType:"blob",
-        }).then((res) => {
-            console.log(res)
-            FileDownload(res.data,"resume.pdf")
-        })
+    const fileDownload = ( url) => {
+        const fileName = url.split('/').pop()
+        const aTag = document.createElement('a')
+        aTag.href = url ;
+        aTag.setAttribute('download', fileName);
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
     }
-   
+
 
   return (
 
@@ -180,7 +178,7 @@ const Profile = () => {
                 <div className='welcome-section'>
 
                     <motion.h1 animate={animation2}>Welcome to my Portfolio</motion.h1>
-                    <button className='btn' onClick={(e) => download(e)}>Resume</button>
+                    <button onClick={() => {fileDownload(resume)}}>View my Resume</button>
 
                 </div>
 
@@ -229,18 +227,36 @@ const Profile = () => {
                     </Fade>
 
                     <Fade left >
-                    <div className='proj'>
-                        <div className='img'>
-                            <img src="/images/jobhunt.png" alt="" />
+
+                        <div className='proj'>
+                            <div className='img'>
+                                <img src="/images/jobhunt.png" alt="" />
+                            </div>
+
+                            <div className='projContent'>
+                                <h2>Job Hunt Portal</h2>
+                                <p>Created using HTML CSS JS</p>
+                                <a href="https://rieevans.github.io/jobportal.github.io/index.html"><button>View Project</button></a>
+                            </div>
+
                         </div>
 
-                        <div className='projContent'>
-                            <h2>Job Hunt Portal</h2>
-                            <p>Created using HTML CSS JS</p>
-                            <a href="https://rieevans.github.io/jobportal.github.io/index.html"><button>View Project</button></a>
-                        </div>
+                    </Fade>
+
+                    <Fade right >
                         
-                    </div>
+                        <div className='proj'>
+                            <div className='img'>
+                                <img src="/images/travel.png" alt="" />
+                            </div>
+
+                            <div className='projContent'>
+                                <h2>Travel Blog</h2>
+                                <p>Created using HTML CSS JS</p>
+                                <a href="https://rieevans.github.io/mediatravel.github.io/index.html"><button>View Project</button></a>
+                            </div>
+
+                        </div>
 
                     </Fade>
                    
@@ -268,11 +284,11 @@ const Profile = () => {
                     <div className='abt-content'>
 
                         <p>
-                            I am <strong>Riejan Cyrus Evangelista</strong>, a fourth-year college student at ICCT Colleges in Cainta, Rizal. I am currently taking a Bachelor of Science degree in Computer Engineering. I started my web development career during the pandemic when I was feeling bored. 
-                            While browsing TikTok, I saw some IT content creators flexing their projects. 
-                            Due to my curiosity, I started to self-study basic design, HTML CSS structure, 
-                            and JavaScript. Until my curiosity turned into a passion. I want to express my creativity and logic to create Websites 
-                            and apply it to the real world.   
+                            I am <strong>Riejan Cyrus Evangelista</strong>, a fourth-year college student at ICCT Colleges in Cainta, Rizal. I am currently taking a Bachelor of Science degree in Computer Engineering.
+                             I started my web development career during the pandemic, I'm hoping to find an Internship related to my career path where I can leverage my technical skills, creativity, and passion for web development to create 
+                             visually appealing and user-friendly websites and applications that provide an exceptional user experience. 
+                             I am eager to contribute my experience in HTML, CSS, JavaScript, and ReactJS to deliver innovative and efficient 
+                             solutions while continuously improving my skills and staying up-to-date with the latest trends and technologies in the industry.   
                         </p>
 
                     </div>

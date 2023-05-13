@@ -97,17 +97,24 @@
 }
 
 
-.container .home .welcome-section .btn {
+.container .home .welcome-section button {
   outline: none;
   border: none;
   cursor: pointer;
-  width: 100px;
+  width: 150px;
   height: 30px;
   font-size: 1rem;
   background-color: #0b0b0c;
   color: var(--text-color);
   margin-top: 3rem;
   border-radius: .5rem;
+}
+
+.container .home .welcome-section button a {
+  text-decoration: none;
+  color: #C7C7C7;
+  font-size: 1rem;
+
 }
 
 .projects {

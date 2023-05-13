@@ -5,10 +5,7 @@ import './App.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import Home from './components/home'
-
-import { Projects } from './components/projects'
-import { Abouts } from './components/abouts'
-import { Contacts } from './components/contacts'
+import React from 'react'
 
 
 
